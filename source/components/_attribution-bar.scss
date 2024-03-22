@@ -1,0 +1,46 @@
+/* component : attribution bar - ============================================================================= - */
+@use '@/scss/units' as unit;
+
+.attribution-bar {
+  & {
+    background-color: var(--color-background, transparent);
+    font-family: var(--system-fontFamily-mono, monospace);
+    font-size: unit.rem(12);
+    text-align: center;
+    color: var(--color-text, inherit);
+  }
+
+  &.-dark {
+    --color-link: hsl(var(--core-color-rajah));
+    --color-text: rgb(var(--core-neutral-seashell));
+    --color-background: rgb(var(--core-neutral-marshland) / 0.8);
+    --color-linkHighlight: hsl(var(--core-color-pixieGreen));
+  }
+
+  &.-light {
+    --color-link: hsl(var(--core-color-cognac));
+    --color-text: rgb(var(--core-neutral-marshland));
+    --color-background: rgb(var(--core-neutral-seashell) / 0.2);
+    --color-linkHighlight: hsl(var(--core-color-mantis));
+  }
+
+  > .link {
+    transition:
+      text-decoration-color var(--core-time-fast),
+      color var(--core-time-fast);
+    outline: none;
+    text-decoration: underline solid transparent;
+  }
+
+  > .link:is(:link, :visited) {
+    color: var(--color-link);
+  }
+
+  > .link:is(:focus, :hover, :active) {
+    color: var(--color-linkHighlight)
+  }
+
+  > .link:focus-visible {
+    text-decoration-color: inherit;
+  }
+}

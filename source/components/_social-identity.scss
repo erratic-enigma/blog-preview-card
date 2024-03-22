@@ -1,0 +1,18 @@
+/* component : social identity - ============================================================================= - */
+@use '@/scss/units' as unit;
+
+.social-identity {
+  & {
+    display: flex;
+    align-items: center;
+    column-gap: unit.rem(12);
+  }
+
+  > .image {
+    flex: 0;
+  }
+
+  > .name {
+    flex: 1 0;
+  }
+}

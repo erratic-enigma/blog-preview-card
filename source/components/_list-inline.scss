@@ -1,0 +1,11 @@
+/* component : list (inline) - =============================================================================== - */
+@use '@/scss/units' as unit;
+
+.list-inline {
+  & {
+    display: inline-flex;
+    gap: unit.rem(8);
+    padding: 0;
+    list-style: none;
+  }
+}

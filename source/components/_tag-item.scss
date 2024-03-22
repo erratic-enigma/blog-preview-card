@@ -1,0 +1,10 @@
+/* component : tag item - ==================================================================================== - */
+@use '@/scss/units' as unit;
+
+.tag-item {
+  & {
+    border-radius: unit.rem(4);
+    padding: unit.rem(4) unit.rem(12);
+    background-color: hsl(var(--core-color-mustard));
+  }
+}

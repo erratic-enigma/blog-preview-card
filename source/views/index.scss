@@ -10,3 +10,13 @@
 @use '@/layouts/body';
 @use '@/layouts/main';
 @use '@/layouts/footer';
+
+// components //
+@use '@/components/attribution-bar';
+@use '@/components/blog-preview';
+@use '@/components/circle-image';
+@use '@/components/link-wrap';
+@use '@/components/list-inline';
+@use '@/components/social-identity';
+@use '@/components/tag-item';
+@use '@/components/visually-hidden';

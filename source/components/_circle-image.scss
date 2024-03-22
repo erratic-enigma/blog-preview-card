@@ -1,0 +1,15 @@
+/* component : circle image - ================================================================================ - */
+@use '@/scss/units' as unit;
+
+.circle-image {
+  & {
+    border-radius: 50%;
+    width: var(--unit-size, auto);
+    height: var(--unit-size, auto);
+
+    @supports(clip-path: circle(0 at 0 0)) {
+      clip-path: circle(50% at center);
+      border-radius: initial;
+    }
+  }
+}

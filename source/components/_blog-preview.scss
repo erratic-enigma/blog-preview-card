@@ -1,0 +1,60 @@
+/* component : blog preview - ================================================================================ - */
+@use '@/scss/units' as unit;
+
+.blog-preview {
+  & {
+    --unit-borderRadius: #{unit.rem(16)};
+
+    transition: box-shadow var(--core-time-blaze);
+    position: relative;
+    border: 1px solid rgb(var(--core-neutral-woodsmoke));
+    border-radius: var(--unit-borderRadius, 0);
+    padding: unit.rem(24);
+    background-color: rgb(var(--core-neutral-white));
+    box-shadow: var(--unit-shadowDistance, unit.rem(8)) var(--unit-shadowDistance, unit.rem(8)) 0 0 rgb(var(--core-neutral-woodsmoke));
+  }
+
+  > * + * {
+    margin-block-start: var(--unit-stack, unit.rem(12));
+  }
+
+  > .author {
+    --unit-stack: #{unit.rem(24)};
+    --unit-size: #{unit.rem(32)};
+
+    font-size: var(--core-fontSizeFixed-small);
+    font-weight: var(--core-fontWeight-extraBold);
+    color: rgb(var(--core-neutral-woodsmoke));
+  }
+
+  > .image {
+    border-radius: unit.rem(8);
+    width: 100%;
+  }
+
+  > .publish {
+    font-size: var(--core-fontSize-small);
+    color: rgb(var(--core-neutral-woodsmoke));
+  }
+
+  > .tags {
+    --unit-stack: #{unit.rem(24)};
+
+    font-size: var(--core-fontSize-small);
+    font-weight: var(--core-fontWeight-extraBold);
+    color: rgb(var(--core-neutral-woodsmoke));
+  }
+
+  > .title {
+    --color-link: rgb(var(--core-neutral-woodsmoke));
+    --color-linkFocus: hsl(var(--core-color-mustard) / 0.2);
+    --color-linkHighlight: hsl(var(--core-color-mustard));
+
+    font-weight: var(--core-fontWeight-extraBold);
+    font-size: var(--core-fontSize-medium);
+  }
+
+  &:has(.link-wrap.-overlay:is(:focus, :hover, :active)) {
+    --unit-shadowDistance: #{unit.rem(14)};
+  }
+}

@@ -1,0 +1,33 @@
+/* component : link wrap - =================================================================================== - */
+.link-wrap {
+  & {
+    transition: color var(--core-time-fast);
+  }
+
+  &:is(:link, :visited) {
+    color: var(--color-link, inherit);
+  }
+
+  &:is(:focus, :hover, :active) {
+    color: var(--color-linkHighlight, inherit);
+  }
+
+  &.-overlay::before {
+    content: '';
+    transition: background-color var(--core-time-fast);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: var(--unit-borderRadius, 0);
+
+    @supports(inset: 0) {
+      inset: 0;
+    }
+  }
+
+  &.-overlay:focus-visible::before {
+    background-color: var(--color-linkFocus, initial);
+  }
+}
