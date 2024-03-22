@@ -1,0 +1,14 @@
+/* layout : footer - ========================================================================================= - */
+@use '@/scss/units' as unit;
+
+footer {
+  & {
+    --layout-gridArea: attributes;
+    --layout-padding: #{unit.rem(12)};
+
+    padding:
+      var(--layout-padding)
+      calc(var(--core-page-gutter) / 2)
+    ;
+  }
+}

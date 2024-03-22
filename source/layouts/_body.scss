@@ -1,0 +1,18 @@
+/* layout : body - =========================================================================================== - */
+@use '@/scss/units' as unit;
+
+body {
+  & {
+    display: grid;
+    grid-template-areas:
+      'component'
+      'attributes'
+    ;
+    grid-template-rows: 1fr auto;
+    row-gap: unit.rem(16);
+  }
+
+  > * {
+    grid-area: var(--layout-gridArea);
+  }
+}
