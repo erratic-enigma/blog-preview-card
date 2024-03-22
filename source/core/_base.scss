@@ -1,0 +1,48 @@
+/* core : base - ============================================================================================= - */
+@use '@/scss/units' as unit;
+
+* {
+  margin: 0;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: hsl(var(--core-color-mustard));
+  font:
+    var(--core-fontWeight-medium) normal
+    var(--core-fontSize-normal) / var(--core-lineHeight-100)
+    var(--core-fontFamily-figtree), var(--system-fontFamily-sansSerif)
+  ;
+  color: rgb(var(--core-neutral-grey));
+
+  @supports(font-variation-settings: normal) {
+    font-family: var(--core-fontFamily-figtreeVariable), var(--system-fontFamily-sansSerif, sans-serif);
+  }
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+  height: auto;
+  font-family: var(--system-fontFamily-mono, monospace);
+  font-size: var(--core-fontSizeFixed-fine, unit.rem(12));
+  text-align: center;
+  color: rgb(var(--core-neutral-black, 0 0 0));
+}
+
+svg {
+  display: block;
+}
+
+:is(*, *::before, *::after) {
+  box-sizing: border-box;
+}
+
+:is(a, p, h1, h2, h3) {
+  overflow-wrap: break-word;
+}
