@@ -1,0 +1,31 @@
+/* core : font families - ==================================================================================== - */
+@use 'sass:map';
+@use '@/scss/fonts' as font;
+
+/* figtree ----------------------------------------------------------------------------------------------------- */
+/* 500 (medium) */
+@font-face {
+  font-family: map.get(font.$figtree, 'name');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: url('#{map.get(font.$figtree, "url")}500.woff2') format('woff2');
+}
+
+/* 800 (extra bold) */
+@font-face {
+  font-family: map.get(font.$figtree, 'name');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 800;
+  src: url('#{map.get(font.$figtree, "url")}800.woff2') format('woff2');
+}
+
+/* variable */
+@font-face {
+  font-family: map.get(font.$figtree, 'name (variable)');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500 800;
+  src: url('#{map.get(font.$figtree, "url")}variable.woff2') format('woff2');
+}

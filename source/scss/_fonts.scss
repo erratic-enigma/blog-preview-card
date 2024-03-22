@@ -1,0 +1,12 @@
+// utility : font variables - ================================================================================ - //
+@use 'sass:map';
+
+// variable font suffix //
+$_variable-suffix: '(Variable)';
+
+// 'figtree' //
+$figtree: (
+  'name': 'Figtree',
+  'name (variable)': 'Figtree #{$_variable-suffix}',
+  'url': '/figtree/'
+);
