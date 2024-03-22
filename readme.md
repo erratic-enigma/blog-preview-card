@@ -21,8 +21,8 @@ This is my solution to the [Blog preview card challenge](https://www.frontendmen
 
 ### Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL: <https://frontendmentor.io/solutions/blog-preview-card-Macf7lwl-s>
+- Live Site URL: <https://erratic-enigma.github.io/blog-preview-card>
 
 ## My process
 
@@ -76,12 +76,10 @@ Users can click / tap any part of the card to follow the link attached. Achieved
 
 #### Card drop shadow
 
-The drop shadow on the card reacts to users hovering, focusing or activating on the child `a` element. Achieved using the `has` selector:
+The drop shadow on the card reacts to users hovering, focusing or activating on the child `a` element. Achieved using the `:has()` pseudo-class:
 
-```scss
-  .blog-preview:has(.link-wrap.-overlay:is(:focus, :hover, :active)) {
-    …
-  }
+```css
+  .blog-preview:has(.link-wrap.-overlay:is(:focus, :hover, :active)) { … }
 ```
 
 ## Resources
